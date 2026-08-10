@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    title= title
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    a(href="/") Return to the homepage
+    h1 Add a New Plant
+    form(action="/update-cobj", method="POST")
+      label(for="name") Name
+      input(type="text", id="name", name="name", required)
+      br
+      label(for="species") Species
+      input(type="text", id="species", name="species", required)
+      br
+      label(for="watering_frequency") Watering Frequency
+      select(id="watering_frequency", name="watering_frequency")
+        option(value="Every 3 days") Every 3 days
+        option(value="Every 7 days") Every 7 days
+        option(value="Every 14 days") Every 14 days
+        option(value="Every 30 days") Every 30 days
+      br
+      button(type="submit") Submit
